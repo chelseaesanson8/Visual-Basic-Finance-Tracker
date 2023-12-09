@@ -20,6 +20,7 @@ Public Class Form1
                 If user("username").ToString() = enteredUsername AndAlso user("password").ToString() = enteredPassword Then
                     ' set loginSuccessful flag 
                     loginSuccessful = True
+                    Exit For
                 End If
             Next
 
@@ -33,7 +34,7 @@ Public Class Form1
                     MessageBox.Show($"Login successful! Welcome, {fullName}!")
 
                     ' Create new dashboard view for user
-                    Dim UserDashboard As New UserDashboard()
+                    Dim UserDashboard As New UserDashboard(loggedInUser)
                     ' route to dashboard
                     UserDashboard.Show()
                     ' hide login form
