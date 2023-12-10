@@ -96,7 +96,8 @@ Partial Class BudgetForm
         Controls.Add(Label1)
         Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point)
         Name = "BudgetForm"
-        Text = "Form4"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Add a Budget"
         ResumeLayout(False)
         PerformLayout()
     End Sub

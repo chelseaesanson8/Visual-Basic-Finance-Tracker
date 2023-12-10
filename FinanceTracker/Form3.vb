@@ -20,4 +20,5 @@
     Public Function GetTransaction() As UserDashboard.Transaction
         Return transaction
     End Function
+
 End Class

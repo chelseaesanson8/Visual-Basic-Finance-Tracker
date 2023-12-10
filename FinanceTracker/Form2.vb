@@ -19,7 +19,7 @@ Public Class UserDashboard
 
     Private Sub UserDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Use loggedInUser to update UI elements with user data
-        usernameLbl.Text = loggedInUser("username").ToString()
+        usernameLbl.Text = loggedInUser("fullName").ToString()
         UpdateTransactionListBox()
         UpdateBudgetListBox()
         UpdateCurrentBalance()
@@ -139,4 +139,11 @@ Public Class UserDashboard
             UpdateBudgetListBox()
         End If
     End Sub
+
+    Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+
 End Class

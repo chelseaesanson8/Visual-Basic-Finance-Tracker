@@ -86,7 +86,8 @@ Partial Class TransactionForm
         Controls.Add(Label2)
         Controls.Add(Label1)
         Name = "TransactionForm"
-        Text = "Form3"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Transaction Update"
         ResumeLayout(False)
         PerformLayout()
     End Sub

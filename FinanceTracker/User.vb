@@ -21,8 +21,6 @@ End Class
 Public Class Budget
     Public Property Amount As Decimal
     Public Property Category As String
-    Public Property StartDate As DateTime
-    Public Property EndDate As DateTime
 End Class
 
 Public Enum TransactionType

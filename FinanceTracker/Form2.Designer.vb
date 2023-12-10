@@ -34,7 +34,7 @@ Partial Class UserDashboard
         Label3 = New Label()
         budgetsLst = New ListBox()
         addBudgetBtn = New Button()
-        Button3 = New Button()
+        logoutBtn = New Button()
         Label4 = New Label()
         lblCurrentBalance = New Label()
         SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class UserDashboard
         ' 
         welcome.AutoSize = True
         welcome.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        welcome.Location = New Point(313, 9)
+        welcome.Location = New Point(274, 9)
         welcome.Name = "welcome"
         welcome.Size = New Size(109, 30)
         welcome.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class UserDashboard
         ' 
         usernameLbl.AutoSize = True
         usernameLbl.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        usernameLbl.Location = New Point(414, 9)
+        usernameLbl.Location = New Point(375, 9)
         usernameLbl.Name = "usernameLbl"
         usernameLbl.Size = New Size(0, 30)
         usernameLbl.TabIndex = 1
@@ -126,15 +126,15 @@ Partial Class UserDashboard
         addBudgetBtn.Text = "Create A New Budget"
         addBudgetBtn.UseVisualStyleBackColor = True
         ' 
-        ' Button3
+        ' logoutBtn
         ' 
-        Button3.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        Button3.Location = New Point(12, 9)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(139, 23)
-        Button3.TabIndex = 10
-        Button3.Text = "Logout"
-        Button3.UseVisualStyleBackColor = True
+        logoutBtn.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        logoutBtn.Location = New Point(12, 9)
+        logoutBtn.Name = "logoutBtn"
+        logoutBtn.Size = New Size(139, 23)
+        logoutBtn.TabIndex = 10
+        logoutBtn.Text = "Logout"
+        logoutBtn.UseVisualStyleBackColor = True
         ' 
         ' Label4
         ' 
@@ -161,7 +161,7 @@ Partial Class UserDashboard
         ClientSize = New Size(809, 676)
         Controls.Add(lblCurrentBalance)
         Controls.Add(Label4)
-        Controls.Add(Button3)
+        Controls.Add(logoutBtn)
         Controls.Add(addBudgetBtn)
         Controls.Add(budgetsLst)
         Controls.Add(Label3)
@@ -172,6 +172,7 @@ Partial Class UserDashboard
         Controls.Add(usernameLbl)
         Controls.Add(welcome)
         Name = "UserDashboard"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "User Dashboard"
         ResumeLayout(False)
         PerformLayout()
@@ -188,7 +189,7 @@ Partial Class UserDashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents logoutBtn As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents lblCurrentBalance As Label
     Friend WithEvents budgetsLst As ListBox

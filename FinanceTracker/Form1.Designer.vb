@@ -97,7 +97,8 @@ Partial Class Form1
         Controls.Add(txtPassword)
         Controls.Add(txtUsername)
         Name = "Form1"
-        Text = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "FinanceTracker - Login"
         ResumeLayout(False)
         PerformLayout()
     End Sub
