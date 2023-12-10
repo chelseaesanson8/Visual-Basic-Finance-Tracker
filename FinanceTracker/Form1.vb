@@ -1,7 +1,9 @@
-﻿Imports Newtonsoft.Json.Linq
+﻿' imports JSON library
+Imports Newtonsoft.Json.Linq
 Imports System.IO
 Public Class Form1
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
+        ' get the file path
         Dim filePath As String = "users.json"
 
         ' get user input
@@ -12,11 +14,12 @@ Public Class Form1
             ' read information from users.json
             Dim jsonString As String = File.ReadAllText(filePath)
             Dim users As JArray = JArray.Parse(jsonString)
-
+            ' create loginSuccesful boolean value 
             Dim loginSuccessful As Boolean = False
 
-            ' check user credentials
+            ' check user credentials within user array of objects
             For Each user As JObject In users
+                ' if username is found, and the password matches 
                 If user("username").ToString() = enteredUsername AndAlso user("password").ToString() = enteredPassword Then
                     ' set loginSuccessful flag 
                     loginSuccessful = True
@@ -45,7 +48,7 @@ Public Class Form1
                 ' if no user found 
                 MessageBox.Show("Invalid username or password. Please try again.")
             End If
-
+            ' if errors found when opening up the file - show error 
         Catch ex As Exception
             MessageBox.Show($"Error reading or parsing the file: {ex.Message}")
         End Try

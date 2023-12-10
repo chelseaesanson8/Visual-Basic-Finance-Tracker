@@ -1,4 +1,6 @@
-﻿Public Class User
+﻿' sets user class to be used throughout application, as well as Transaction, Budget, and TransactionType
+
+Public Class User
     Public Property Username As String
     Public Property Password As String
     Public Property FullName As String
