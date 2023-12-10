@@ -12,9 +12,11 @@ Public Class Transaction
     Public Property Type As TransactionType
     Public Property [Date] As DateTime
 
+    Public Property Category As String 
+
     Public Overrides Function ToString() As String
         ' Only return the amount as the string representation of the transaction
-        Return Amount.ToString("C")
+        Return $"{Amount:C} - Category: {Category} - Date: {[Date]}"
     End Function
 End Class
 

@@ -10,6 +10,7 @@
     Private Sub submitBtn_Click(sender As Object, e As EventArgs) Handles submitBtn.Click
         If Decimal.TryParse(txtAmount.Text, transaction.Amount) Then
             transaction.Date = DateTime.Now
+            transaction.Category = txtCategory.Text
             DialogResult = DialogResult.OK
             Close()
         Else
@@ -20,5 +21,6 @@
     Public Function GetTransaction() As UserDashboard.Transaction
         Return transaction
     End Function
+
 
 End Class

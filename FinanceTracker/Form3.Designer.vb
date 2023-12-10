@@ -27,6 +27,8 @@ Partial Class TransactionForm
         txtAmount = New TextBox()
         submitBtn = New Button()
         Label3 = New Label()
+        txtCategory = New TextBox()
+        Label4 = New Label()
         SuspendLayout()
         ' 
         ' Label1
@@ -58,7 +60,7 @@ Partial Class TransactionForm
         ' 
         ' submitBtn
         ' 
-        submitBtn.Location = New Point(202, 261)
+        submitBtn.Location = New Point(202, 303)
         submitBtn.Name = "submitBtn"
         submitBtn.Size = New Size(182, 23)
         submitBtn.TabIndex = 5
@@ -75,11 +77,30 @@ Partial Class TransactionForm
         Label3.Text = "Please specify Deposits as normal (as a positive number)" & vbCrLf & "and Withdrawals as negative numbers (-10.00)." & vbCrLf & vbCrLf
         Label3.TextAlign = ContentAlignment.TopCenter
         ' 
+        ' txtCategory
+        ' 
+        txtCategory.Location = New Point(284, 254)
+        txtCategory.Name = "txtCategory"
+        txtCategory.Size = New Size(100, 23)
+        txtCategory.TabIndex = 8
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(199, 254)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(82, 21)
+        Label4.TabIndex = 7
+        Label4.Text = "Category:"
+        ' 
         ' TransactionForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(594, 493)
+        Controls.Add(txtCategory)
+        Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(submitBtn)
         Controls.Add(txtAmount)
@@ -97,4 +118,6 @@ Partial Class TransactionForm
     Friend WithEvents txtAmount As TextBox
     Friend WithEvents submitBtn As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents txtCategory As TextBox
+    Friend WithEvents Label4 As Label
 End Class

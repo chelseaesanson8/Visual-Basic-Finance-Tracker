@@ -28,7 +28,6 @@ Partial Class UserDashboard
         usernameLbl = New Label()
         Label1 = New Label()
         transactionsLst = New ListBox()
-        addWithdrawalBtn = New Button()
         addDepositBtn = New Button()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         Label3 = New Label()
@@ -62,7 +61,7 @@ Partial Class UserDashboard
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(91, 135)
+        Label1.Location = New Point(100, 147)
         Label1.Name = "Label1"
         Label1.Size = New Size(206, 30)
         Label1.TabIndex = 2
@@ -72,36 +71,26 @@ Partial Class UserDashboard
         ' 
         transactionsLst.FormattingEnabled = True
         transactionsLst.ItemHeight = 15
-        transactionsLst.Location = New Point(93, 184)
+        transactionsLst.Location = New Point(12, 233)
         transactionsLst.Name = "transactionsLst"
-        transactionsLst.Size = New Size(206, 304)
+        transactionsLst.Size = New Size(351, 304)
         transactionsLst.TabIndex = 3
-        ' 
-        ' addWithdrawalBtn
-        ' 
-        addWithdrawalBtn.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        addWithdrawalBtn.Location = New Point(327, 184)
-        addWithdrawalBtn.Name = "addWithdrawalBtn"
-        addWithdrawalBtn.Size = New Size(139, 23)
-        addWithdrawalBtn.TabIndex = 5
-        addWithdrawalBtn.Text = "Add Withdrawal"
-        addWithdrawalBtn.UseVisualStyleBackColor = True
         ' 
         ' addDepositBtn
         ' 
         addDepositBtn.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        addDepositBtn.Location = New Point(327, 222)
+        addDepositBtn.Location = New Point(131, 192)
         addDepositBtn.Name = "addDepositBtn"
         addDepositBtn.Size = New Size(139, 23)
         addDepositBtn.TabIndex = 6
-        addDepositBtn.Text = "Add Deposit"
+        addDepositBtn.Text = "Add Transaction"
         addDepositBtn.UseVisualStyleBackColor = True
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(508, 135)
+        Label3.Location = New Point(528, 147)
         Label3.Name = "Label3"
         Label3.Size = New Size(173, 30)
         Label3.TabIndex = 7
@@ -111,15 +100,15 @@ Partial Class UserDashboard
         ' 
         budgetsLst.FormattingEnabled = True
         budgetsLst.ItemHeight = 15
-        budgetsLst.Location = New Point(491, 184)
+        budgetsLst.Location = New Point(434, 233)
         budgetsLst.Name = "budgetsLst"
-        budgetsLst.Size = New Size(206, 304)
+        budgetsLst.Size = New Size(363, 304)
         budgetsLst.TabIndex = 8
         ' 
         ' addBudgetBtn
         ' 
         addBudgetBtn.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        addBudgetBtn.Location = New Point(327, 262)
+        addBudgetBtn.Location = New Point(543, 192)
         addBudgetBtn.Name = "addBudgetBtn"
         addBudgetBtn.Size = New Size(139, 23)
         addBudgetBtn.TabIndex = 9
@@ -140,7 +129,7 @@ Partial Class UserDashboard
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.Location = New Point(152, 68)
+        Label4.Location = New Point(198, 70)
         Label4.Name = "Label4"
         Label4.Size = New Size(0, 30)
         Label4.TabIndex = 11
@@ -149,7 +138,7 @@ Partial Class UserDashboard
         ' 
         lblCurrentBalance.AutoSize = True
         lblCurrentBalance.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        lblCurrentBalance.Location = New Point(248, 68)
+        lblCurrentBalance.Location = New Point(251, 70)
         lblCurrentBalance.Name = "lblCurrentBalance"
         lblCurrentBalance.Size = New Size(0, 30)
         lblCurrentBalance.TabIndex = 12
@@ -166,7 +155,6 @@ Partial Class UserDashboard
         Controls.Add(budgetsLst)
         Controls.Add(Label3)
         Controls.Add(addDepositBtn)
-        Controls.Add(addWithdrawalBtn)
         Controls.Add(transactionsLst)
         Controls.Add(Label1)
         Controls.Add(usernameLbl)
@@ -183,7 +171,6 @@ Partial Class UserDashboard
     Friend WithEvents usernameLbl As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents transactionsLst As ListBox
-    Friend WithEvents addWithdrawalBtn As Button
     Friend WithEvents addDepositBtn As Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label3 As Label
